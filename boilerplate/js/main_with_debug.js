@@ -1,3 +1,5 @@
+// create the city table
+
 var cityPop = [
 	{ 
 		city: 'Madison',
@@ -17,12 +19,15 @@ var cityPop = [
 	}
 ];
 
+// define the city size based on the pop
+
 function addColumns(cityPop){
     
     document.querySelectorAll("tr").forEach(function(row, i){
 
     	if (i == 0){
 
+//this adds a header
 // typo in insertAdjacentHTML, 'e' was missing
 
     		row.insertAdjacentHTML('beforeend', '<th>City Size</th>');
@@ -42,6 +47,7 @@ function addColumns(cityPop){
     			citySize = 'Large';
     		};
 
+// this adds the cell with the size
 // Funtions like insertAdjacentHTML need to be in parenthese if not it reads as a string
 
 		row.insertAdjacentHTML('beforeend', '<td>' + citySize + '</td>');
@@ -51,6 +57,8 @@ function addColumns(cityPop){
 // extra ; not needed
 
 }
+
+// this allows the click pop up message and the hover changing colors to work
 
 function addEvents(){
 
